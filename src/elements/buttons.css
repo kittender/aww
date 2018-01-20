@@ -1,0 +1,76 @@
+button,
+[type="submit"],
+[type="reset"],
+[type="button"] {
+    cursor: pointer;
+    position: relative;
+    padding: 0.5em 1.5em;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+    color: black;
+    border: 3px solid;
+}
+
+button:hover,
+button:focus,
+[type="submit"]:hover,
+[type="submit"]:focus,
+[type="reset"]:hover,
+[type="reset"]:focus,
+[type="button"]:hover,
+[type="button"]:focus {
+    top: -1px;
+    outline: 1px solid black;
+}
+
+button:active,
+[type="submit"]:active,
+[type="reset"]:active,
+button[type="button"]:active,
+input[type="button"]:active {
+    top: 0;
+    border-style: inset;
+}
+
+
+button,
+[type="button"] {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+[type="submit"] {
+    letter-spacing: 0;
+    color: white;
+    background-color: var(--action);
+    border-color: var(--action);
+}
+
+[type="reset"] {
+    letter-spacing: 0;
+    background-color: var(--neutral);
+    border-color: var(--neutral);
+}
+
+
+button + button,
+[type="button"] + [type="button"] {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+[type="submit"] + button,
+[type="submit"] + [type="button"] {
+    color: white;
+    background-color: var(--medium);
+    border-color: var(--medium);
+}
+
+button + button + button,
+[type="button"] + [type="button"] + [type="button"],
+[type="submit"] + button + button,
+[type="submit"] + [type="button"] + [type="button"] {
+    background-color: var(--neutral);
+    border-color: var(--neutral);
+}

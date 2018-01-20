@@ -1,0 +1,239 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+html {
+  box-sizing: border-box;
+}
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+html {
+  font-size: 0.625em;
+}
+body, html {
+  margin: 0;
+  min-height: 100vh;
+}
+* + * {
+  margin-top: 1.5em;
+}
+a {
+  cursor: default;
+  position: relative;
+  text-decoration: none;
+}
+a:visited {
+  color: #1a4368;
+}
+a:link, a:link:hover {
+  color: #00529b;
+}
+a:link {
+  cursor: pointer;
+}
+a:link::after {
+  border-bottom: 2px solid;
+  bottom: -1px;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transition: all 0.2s linear;
+  width: 1em;
+}
+a:focus:after, a:hover::after {
+  width: 100%;
+}
+a:link:active, a:link:hover:active {
+  background-color: #00eae6;
+}
+body {
+  background-color: #fffdf7;
+  color: #000d07;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+body > div {
+  min-height: 100vh;
+  overflow: hidden;
+}
+[type=button], [type=reset], [type=submit], button {
+  border: 3px solid;
+  color: #000;
+  cursor: pointer;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: -0.5px;
+  padding: 0.5em 1.5em;
+  position: relative;
+}
+[type=button]:focus,
+[type=button]:hover,
+[type=reset]:focus,
+[type=reset]:hover,
+[type=submit]:focus,
+[type=submit]:hover,
+button:focus,
+button:hover {
+  outline: 1px solid #000;
+  top: -1px;
+}
+[type=reset]:active,
+[type=submit]:active,
+button:active,
+button[type=button]:active,
+input[type=button]:active {
+  border-style: inset;
+  top: 0;
+}
+[type=button], button {
+  background-color: #00eae6;
+  border-color: #00eae6;
+}
+[type=submit] {
+  background-color: #00529b;
+  border-color: #00529b;
+  color: #fff;
+  letter-spacing: 0;
+}
+[type=reset] {
+  background-color: #d1cfca;
+  border-color: #d1cfca;
+  letter-spacing: 0;
+}
+[type=button] + [type=button], button + button {
+  background-color: #9cea00;
+  border-color: #9cea00;
+}
+[type=submit] + [type=button], [type=submit] + button {
+  background-color: #3d3c3b;
+  border-color: #3d3c3b;
+  color: #fff;
+}
+[type=button] + [type=button] + [type=button],
+[type=submit] + [type=button] + [type=button],
+[type=submit] + button + button,
+button + button + button {
+  background-color: #d1cfca;
+  border-color: #d1cfca;
+}
+footer {
+  padding: 2.5rem 3rem;
+  position: relative;
+}
+footer::after {
+  background-color: inherit;
+  content: "";
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+header {
+  padding: 4rem 3rem;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 0;
+}
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
+}
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+h1 {
+  font-size: 4.8rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3.2rem;
+}
+h4 {
+  font-size: 2.8rem;
+}
+h5 {
+  font-size: 2.4rem;
+}
+h6 {
+  font-size: 2rem;
+}
+h1 + h2, h3 + h4, h5 + h6 {
+  color: #3d3c3b;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0.5em;
+}
+hr {
+  background-color: #d1cfca;
+  border: 0;
+  font-size: 4.8rem;
+  height: 3px;
+  margin: 1.5em auto;
+  width: 50%;
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+main {
+  padding: 5rem 3rem;
+}
+nav {
+  padding: 1.5rem 3rem;
+}
+nav:first-child {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+  position: fixed;
+  width: 100%;
+}
+nav:first-child::after {
+  background-color: rgba(0, 0, 0, 0.05);
+  bottom: -5px;
+  content: "";
+  height: 5px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+nav:first-child + main {
+  margin-top: 58px;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  display: inline-block;
+  margin-top: 0;
+}
+nav li + li {
+  margin-left: 1.5em;
+}
+header + nav {
+  margin-top: 0;
+}
+p {
+  font-family: Times New Roman, Times, serif;
+  text-align: justify;
+}
+p + p {
+  text-indent: 1em;
+}
+h1 + h2 + p, h1 + p {
+  font-size: 2.4rem;
+}

@@ -1,0 +1,38 @@
+a {
+    cursor: default;
+    position: relative;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #1a4368;
+}
+
+a:link, a:link:hover {
+    color: #00529b;
+}
+
+a:link {
+    cursor: pointer;
+}
+
+a:link::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 1em;
+    height: 1px;
+    border-bottom: 2px solid;
+    transition: all 0.2s linear;
+}
+
+a:focus:after,
+a:hover::after {
+    width: 100%;
+}
+
+a:link:hover:active,
+a:link:active {
+    background-color: var(--primary);
+}
