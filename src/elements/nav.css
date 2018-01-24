@@ -18,6 +18,7 @@ nav:first-child::after {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
+nav:first-child + header, 
 nav:first-child + main {
     margin-top: 58px;
 }

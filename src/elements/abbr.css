@@ -1,0 +1,26 @@
+abbr {
+    cursor: help;
+    display: inline-block;
+    text-indent: 0;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+abbr::after {
+    content: attr(title);
+    margin-left: 0;
+    padding: .3em;
+    font-size: 0;
+    font-weight: normal;
+    color: var(--dark);
+    background-color: color(var(--neutral) tint(20%));
+    border: 1px dotted color(var(--neutral) shade(20%));
+    transition: all 0.2s linear;
+}
+abbr:hover {
+    border-color: transparent;
+}
+abbr:hover::after {
+    margin-left: .5em;
+    font-size: inherit;
+}

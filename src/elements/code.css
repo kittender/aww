@@ -1,0 +1,9 @@
+code {
+    display: block;
+    padding: 1em;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 1.2rem;
+    color: var(--light);
+    background-color: var(--dark);
+    border-radius: 2px;
+}

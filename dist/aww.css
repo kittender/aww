@@ -17,6 +17,32 @@ body, html {
 * + * {
   margin-top: 1.5em;
 }
+abbr {
+  border-bottom: 1px dotted;
+  cursor: help;
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  text-indent: 0;
+}
+abbr::after {
+  background-color: #dad9d5;
+  border: 1px dotted #a7a6a2;
+  color: #000d07;
+  content: attr(title);
+  font-size: 0;
+  font-weight: 400;
+  margin-left: 0;
+  padding: 0.3em;
+  transition: all 0.2s linear;
+}
+abbr:hover {
+  border-color: transparent;
+}
+abbr:hover::after {
+  font-size: inherit;
+  margin-left: 0.5em;
+}
 a {
   cursor: default;
   position: relative;
@@ -118,6 +144,15 @@ button + button + button {
   background-color: #d1cfca;
   border-color: #d1cfca;
 }
+code {
+  background-color: #000d07;
+  border-radius: 2px;
+  color: #fffdf7;
+  display: block;
+  font-family: Lucida Console, Monaco, monospace;
+  font-size: 1.2rem;
+  padding: 1em;
+}
 footer {
   padding: 2.5rem 3rem;
   position: relative;
@@ -189,8 +224,28 @@ img {
   height: auto;
   max-width: 100%;
 }
+kbd {
+  background-color: #d1cfca;
+  border: 1px solid #a7a6a2;
+  border-radius: 2px;
+  color: #000d07;
+  font-family: Lucida Console, Monaco, monospace;
+  font-size: 1.2rem;
+  padding: 0.3em 0.5em;
+}
 main {
   padding: 5rem 3rem;
+}
+mark {
+  background-color: #40efec;
+  border-bottom: 2px solid #40efec;
+  color: #003b3a;
+  padding: 0 0.3em;
+}
+mark:nth-of-type(2n) {
+  background-color: #b5ef40;
+  border-color: #b5ef40;
+  color: #273b00;
 }
 nav {
   padding: 1.5rem 3rem;
@@ -209,7 +264,7 @@ nav:first-child::after {
   position: absolute;
   width: 100%;
 }
-nav:first-child + main {
+nav:first-child + header, nav:first-child + main {
   margin-top: 58px;
 }
 nav ul {
