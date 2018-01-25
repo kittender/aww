@@ -18,7 +18,7 @@ nav:first-child::after {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-nav:first-child + header, 
+nav:first-child + header,
 nav:first-child + main {
     margin-top: 58px;
 }
@@ -32,6 +32,11 @@ nav ul {
 nav li {
     display: inline-block;
     margin-top: 0;
+    border: none;
+}
+
+nav li::before {
+    content: none;
 }
 
 nav li + li {
