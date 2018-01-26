@@ -1,0 +1,7 @@
+del {
+    padding: 0 0 0.1em;
+    text-decoration: line-through;
+    color: var(--edit-del);
+    background-color: var(--edit-del-background);
+    border-radius: 2px;
+}

@@ -1,0 +1,8 @@
+ins {
+    padding: 0 0 0.1em;
+    text-decoration: none;
+    color: var(--edit-ins);
+    background-color: var(--edit-ins-background);
+    border-radius: 2px;
+    border-bottom: 1px dashed;
+}
