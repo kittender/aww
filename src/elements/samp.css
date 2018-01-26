@@ -1,0 +1,9 @@
+samp {
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    font-family: var(--monospace);
+    font-size: 1.2rem;
+    color: var(--light);
+    background-color: #1c1d27;
+    border-radius: 2px;
+}

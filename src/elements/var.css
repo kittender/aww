@@ -1,0 +1,6 @@
+var {
+    font-family: var(--monospace);
+    font-style: normal;
+    font-size: inherit;
+    color: var(--code-alt);
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>aww</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../aww.css">
+</head>
+
+<body style="width: 50%; margin: 5% auto;">
+    <div>
+        
+        <h4>Code</h4>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Learn Game Development at ZENVA.com&lt;/title&gt;
+    &lt;!-- Just for basic styling. --&gt;
+    &lt;link rel="stylesheet" href="assets/css/base.css" /&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="content"&gt;&lt;/div&gt;
+    &lt;script type="text/babel" src="main.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+        <h4>Keyboard</h4>
+        <p>You use keyboard shortcut <kbd>CTRL + C</kbd> and then <kbd>CTRL + V</kbd> to copy/paste a text.</p>
+
+        <h4>Sample code</h4>
+        <p style="text-align: left;">Block Formatting Context can be created by adding <samp>overflow: hidden;</samp> to a selector. On another note, here's an example of a thumbnail style : <samp>.thumbnail { padding: 5px; background: white; border: 1px solid gray; }</samp></p>
+
+        <h4>Variable</h4>
+        <p>Don't forget to declare <samp>var <var>kitty</var> = new Kitty();</samp> before trying <samp>var <var>kittyBasket</var> = [<var>kitty</var>, <var>kitty</var>];</samp></p>
+        <pre><code>(function(){
+    var <var>kitty</var> = new Kitty();
+    var <var>kittyBasket</var> = [<var>kitty</var>, <var>kitty</var>];
+})();</code></pre>
+        
+        <hr>
+        
+        <h3>Formatting a code block</h3>
+        <p>You may use following formatting tags inside a code block :</p>
+        <ul style="font-size: 1.2rem">
+            <li><samp>u</samp> for uncommon elements, errors</li>
+            <li><samp>b</samp> for bland, plain content like text</li>
+            <li><samp>i</samp> for inconspicuous elements like comments</li>
+            <li><samp>var</samp> for variables</li>
+            <li><samp>em</samp> for emphasised elements - <small>be aware it's not an accessibility good practice</small></li>
+            <li><samp>strong</samp> for important elements - <small>be aware it's not an accessibility good practice</small></li>
+        </ul>
+        <pre><code><i>&lt;!DOCTYPE html&gt;</i>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;<b>Learn Game Development at ZENVA.com</b>&lt;/title&gt;
+    <i>&lt;!-- Just for basic styling. --&gt;</i>
+    &lt;link <strong>rel</strong>=<var>"stylesheet"</var> <strong>href</strong>=<var>"assets/css/base.css"</var> /&gt;
+    &lt;script <strong>src</strong>=<var>"https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"</var>&gt;&lt;/script&gt;
+    &lt;script <strong>src</strong>=<var>"https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"</var>&gt;&lt;/script&gt;
+    &lt;script <strong>src</strong>=<var>"https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"</var>&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div <strong>id</strong>=<var>"content"</var>&gt;
+        <b>This a wonderful content text, indeed.</b><u>&lt;/em></u>
+        &lt;button <strong>onclick</strong>=<var>"<em>handleClick();</em>"</var>&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;script <strong>type</strong>=<var>"text/babel"</var> <strong>src</strong>=<var>"main.js"</var>&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        
+    </div>
+</body>
+
+</html>
