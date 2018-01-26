@@ -17,7 +17,7 @@ body, html {
 * + * {
   margin-top: 1.5em;
 }
-br {
+br, nav * + *, p * + * {
   margin-top: 0;
 }
 abbr {
@@ -189,7 +189,35 @@ code {
   display: block;
   font-family: Lucida Console, Monaco, monospace;
   font-size: 1.2rem;
+  overflow-x: scroll;
   padding: 1em;
+}
+code u {
+  color: #ff00ab;
+  text-decoration: none;
+}
+code b {
+  color: #fffdf7;
+  font-weight: 400;
+}
+code i {
+  color: #666395;
+  font-style: normal;
+}
+code em {
+  color: #00eae6;
+  font-style: normal;
+}
+code strong {
+  color: #9cea00;
+  font-weight: 400;
+}
+del {
+  background-color: #ffe5d7;
+  border-radius: 2px;
+  color: #a12828;
+  padding: 0 0 0.1em;
+  text-decoration: line-through;
 }
 div {
   overflow: hidden;
@@ -265,6 +293,14 @@ img {
   height: auto;
   max-width: 100%;
 }
+ins {
+  background-color: #e6ffd7;
+  border-bottom: 1px dashed;
+  border-radius: 2px;
+  color: #357215;
+  padding: 0 0 0.1em;
+  text-decoration: none;
+}
 kbd {
   background-color: #d1cfca;
   border: 1px solid #a7a6a2;
@@ -272,7 +308,7 @@ kbd {
   color: #000d07;
   font-family: Lucida Console, Monaco, monospace;
   font-size: 1.2rem;
-  padding: 0.3em 0.5em;
+  padding: 0.4em 0.5em 0.15em;
 }
 ul {
   list-style-type: none;
@@ -357,7 +393,6 @@ nav ul {
 nav li {
   border: 0;
   display: inline-block;
-  margin-top: 0;
 }
 nav li::before {
   content: none;
@@ -377,6 +412,19 @@ p + p {
 }
 h1 + h2 + p, h1 + p {
   font-size: 2.4rem;
+}
+s {
+  color: #a12828;
+  text-decoration: line-through;
+}
+samp {
+  background-color: #1c1d27;
+  border-radius: 2px;
+  color: #fffdf7;
+  display: inline-block;
+  font-family: Lucida Console, Monaco, monospace;
+  font-size: 1.2rem;
+  padding: 0.2em 0.5em;
 }
 table {
   border-collapse: collapse;
@@ -432,4 +480,10 @@ th + th::before {
   left: -1px;
   position: absolute;
   top: 0;
+}
+var {
+  color: #60a5ff;
+  font-family: Lucida Console, Monaco, monospace;
+  font-size: inherit;
+  font-style: normal;
 }

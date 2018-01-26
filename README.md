@@ -21,26 +21,30 @@ Just write consistent HTML, and it's done.
 ### Elements
 
 * Anchors | ``a``
-* Lists | ``ul``
-* Buttons | ``button`` ``input``
 * Tables | ``table`` ``caption`` ``th`` ``td``
+* Lists | ``ul``
 
-### Typography
+### Hierarchy
 
 * Headings | ``h1`` ``h2`` ``h3`` ``h4`` ``h5`` ``h6``
 * Paragraphs | ``p``
 * Horizontal rules | ``hr``
-* Quotes | ``blockquote``
-* Highlights | ``mark``
 
+### Forms
 
-#### Specific
+* Buttons | ``button`` ``input``
+
+### Formatting
 
 * Abbreviations | ``abbr``
 * Addresses | ``address``
-* Code blocks | ``code``
-* Keyboard shortcuts | ``kbd``
+* Quotations | ``blockquote``
+* Marked | ``mark``
 
+### Other
+
+* Code | ``code`` ``kbd`` ``samp`` ``var``
+* Edition | ``del`` ``ins`` ``s``
 
 
 ### Layouts

@@ -1,9 +1,34 @@
 :root {
+    
+     /* use against light tones */
+    /*! Always check contrast: http://leaverou.github.io/contrast-ratio/ */
     --dark: #000d07;
     --medium: #3d3c3b;
-    --light: #fffdf7;
     --action: #00529b;
+    
+     /* use against dark tones */
+    /*! Always check contrast: http://leaverou.github.io/contrast-ratio/ */
+    --light: #fffdf7;
+    --neutral: #d1cfca;
     --primary: #00eae6;
     --accent: #9cea00;
-    --neutral: #d1cfca;
+    
+    
+    --monospace: "Lucida Console", Monaco, monospace;
+    --serif: "Times New Roman", Times, serif;
+    --sans-serif: Arial, Helvetica, sans-serif;
+    --brand: Verdana, Geneva, sans-serif;
+    
+    
+    --code: #f6ff60;
+    --code-alt: #60a5ff;
+    --code-quiet: #666395;
+    --code-error: #ff00ab;
+    --code-background: #1c1d27;
+    
+    --edit-del: #a12828;
+    --edit-del-background: #ffe5d7;
+    --edit-ins: #357215;
+    --edit-ins-background: #e6ffd7;
+    
 }
