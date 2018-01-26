@@ -5,3 +5,9 @@
 br {
     margin-top: 0;
 }
+
+
+nav * + *,
+p * + * {
+    margin-top: 0;
+}
