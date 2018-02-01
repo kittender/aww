@@ -1,0 +1,36 @@
+time {
+    letter-spacing: -0.5px;
+    font-family: var(--courrier);
+}
+
+time[datetime] {
+    cursor: help;
+    position: relative;
+}
+
+time[datetime]:hover {
+    border-bottom: 1px dashed;
+}
+
+time[datetime]::after {
+    content: attr(datetime);
+    opacity: 0;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    padding: 0;
+    color: var(--light);
+    font-size: 0;
+    background-color: var(--dark);
+    transform: translateY(calc(-100% - 5px));
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.15);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    transition: all 0.1s ease;
+}
+
+time[datetime]:hover::after {
+    opacity: 1;
+    padding: .2em .5em;
+    font-size: inherit;
+}

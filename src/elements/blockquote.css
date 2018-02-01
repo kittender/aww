@@ -1,26 +1,22 @@
 blockquote {
     position: relative;
-    max-width: 88%;
-    margin: 1.5em auto;
+    margin: 1.5em 0;
     padding: 1em;
+    padding-right: 22%;
     font-family: var(--serif);
     font-size: 1.1em;
     line-height: 1.2;
     text-align: justify;
-    letter-spacing: -0.5px;
+    letter-spacing: 0.5px;
+    border-left: 8px solid color(var(--neutral) tint(50%));
+    background-color: color(var(--neutral) tint(80%));
 }
 
-blockquote::before,
 blockquote::after {
     position: absolute;
     font-size: 6rem;
     line-height: 6rem;
     color: var(--neutral);
-}
-
-blockquote::before {
-    content: "\275D";
-    margin-left: -.8em;
 }
 
 blockquote::after {

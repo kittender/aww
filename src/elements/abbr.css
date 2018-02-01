@@ -1,9 +1,11 @@
 abbr {
     cursor: help;
     display: inline-block;
-    text-indent: 0;
+    font-family: var(--courrier);
     font-weight: bold;
+    text-indent: 0;
     text-decoration: none;
+    text-transform: uppercase;
     border-bottom: 1px dotted;
 }
 abbr::after {
@@ -12,9 +14,9 @@ abbr::after {
     padding: .3em;
     font-size: 0;
     font-weight: normal;
+    text-transform: none;
     color: var(--dark);
-    background-color: color(var(--neutral) tint(20%));
-    border: 1px dotted color(var(--neutral) shade(20%));
+    background-color: color(var(--neutral) tint(50%));
     transition: all 0.2s linear;
 }
 abbr:hover {
@@ -22,5 +24,6 @@ abbr:hover {
 }
 abbr:hover::after {
     margin-left: .5em;
+    font-family: var(--serif);
     font-size: inherit;
 }

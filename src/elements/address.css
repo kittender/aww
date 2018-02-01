@@ -2,9 +2,9 @@ address {
     padding: 1.2em;
     font-style: normal;
     line-height: 1.5;
-    letter-spacing: 0.5px;
+    letter-spacing: -0.5px;
     color: var(--dark);
-    border: 1px dotted;
-    border-left: 3px double;
-    border-right: 1px solid var(--medium);
+    font-family: var(--courrier);
+    border-left: 8px solid var(--neutral);
+    background-color: color(var(--neutral) tint(50%));
 }
