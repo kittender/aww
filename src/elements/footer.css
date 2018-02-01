@@ -12,3 +12,7 @@ footer::after {
     top: 0; left: 0;
     background-color: inherit;
 }
+
+main + footer {
+	margin-top: 0;
+}
