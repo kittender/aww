@@ -7,9 +7,10 @@ Just write consistent HTML, and it's done.
 #### Paradigms
 
 * **zero selectors**
-* border-box sizing
+* semantic HTML hooks
 * ``rem`` base font-size
 * fluid ``em`` scaling
+* border-box sizing
 * responsive images
 * automatic vertical rythm
 * block formatting context for divs
@@ -56,28 +57,8 @@ AWW layouts automatically adapt depending on the presence, absence and order of 
 * Footer
 * Aside / **coming soon**
 
-#### Simple
+### ARIA
 
-```html
-<body>
-    <div>
-        <header></header>
-        <!--<nav></nav>-->
-        <main></main>
-        <footer></footer>
-    </div>
-</body>
-```
+AWW components are **always hooked** on a semantic, accessible **ARIA code** from the HTML page. Automatically hooking visual meaning to semantic meaning ensures *a seamless development of both visual design and content design*, for a more **accessible web**.
 
-#### Navbar
-
-```html
-<body>
-    <div>
-        <nav></nav>
-        <!--<header></header>-->
-        <main></main>
-        <footer></footer>
-    </div>
-</body>
-```
+/ **coming soon**
