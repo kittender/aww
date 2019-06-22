@@ -8,14 +8,14 @@ caption {
     padding: 1em 0;
     font-weight: bold;
     text-transform: uppercase;
-    border-bottom: 5px solid color(var(--neutral) tint(50%));
+    border-bottom: .5em solid color(var(--neutral) tint(50%));
 }
 
 th,
 td {
     position: relative;
     padding: .5em 1em;
-    border: 1px solid color(var(--neutral) tint(50%));
+    border: .05em solid color(var(--neutral) tint(50%));
 }
 
 th::after,
@@ -35,8 +35,8 @@ th::after {
 }
 
 td::after {
-    top: 1px;
-    left: 1px;
+    top: .05em;
+    left: .05em;
     background-color: color(var(--light) shade(3%));
 }
 
@@ -48,7 +48,7 @@ tr:hover td::after {
 
 th {
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: .05em;
     font-weight: normal;
     font-size: .8em;
     color: var(--light);
@@ -59,7 +59,7 @@ th + th::before {
     content: "";
     position: absolute;
     top: 0;
-    left: -1px;
+    left: -.05em;
     height: 100%;
-    border-left: 1px solid var(--neutral);
+    border-left: .05em solid var(--neutral);
 }

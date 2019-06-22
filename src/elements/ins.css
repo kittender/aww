@@ -3,6 +3,6 @@ ins {
     text-decoration: none;
     color: var(--edit-ins);
     background-color: var(--edit-ins-background);
-    border-radius: 2px;
-    border-bottom: 1px dashed;
+    border-radius: .2em;
+    border-bottom: .05em dashed;
 }

@@ -11,7 +11,7 @@ ul ul {
     margin-left: 1.5em;
     margin-top: .5em;
     padding-top: .5em;
-    border-top: 1px dashed color(var(--medium) tint(80%));
+    border-top: .05em dashed color(var(--medium) tint(80%));
 }
 
 li {
@@ -86,7 +86,7 @@ ol[type="I"] > li::before {
 
 ol li li::before {
     background-color: transparent;
-    border: 1px solid;
+    border: .05em solid;
 }
 
 ol li li li::before {
@@ -97,19 +97,19 @@ ol li li li::before {
 
 ol li li li li::before {
     background-color: transparent;
-    border: 1px solid;
+    border: .05em solid;
     border-radius: 0;
 }
 
 [role="navigation"],
 [role="navigation"] ol,
 [role="navigation"] ul {
-    border-left: 1px solid rgba(0,0,0,0.1);
+    border-left: .05em solid rgba(0,0,0,0.1);
 }
 
 [role="navigation"] ol,
 [role="navigation"] ul {
-    border-top: 1px solid rgba(0,0,0,0.1);
+    border-top: .05em solid rgba(0,0,0,0.1);
 }
 
 [role="navigation"] li::before {
