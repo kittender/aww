@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>aww</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        section {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            font-family: sans-serif;
+        }
+        section::before {
+            content: attr(color);
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+
+<body style="width: 50%; margin: 5% auto;">
+    <div>
+        <section color="dark" style="background: #000d07; color: white;"></section>
+        <section color="medium" style="background: #3d3c3b; color: white;"></section>
+        <section color="action" style="background: #0073d9; color: white;"></section>
+        <section color="known" style="background: #447097; color: white;"></section>
+    </div>
+    <div>
+        <section color="light" style="background: #fffdf7;"></section>
+        <section color="neutral" style="background: #d1cfca;"></section>
+        <section color="primary" style="background: #4de1ff;"></section>
+        <section color="accent" style="background: #a0f000;"></section>
+    </div>
+</body>
+
+</html>
