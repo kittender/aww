@@ -1,0 +1,36 @@
+figure {
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	padding: 1em;
+    background-color: rgba(0,0,0,0.15);
+    border-radius: .2em;
+}
+
+
+figure img {
+	border: 0.05em solid white;
+}
+
+figcaption {
+	text-align: center;
+	font-size: 0.9em;
+	font-family: var(--courrier);
+}
+
+figcaption:first-child {
+	padding-bottom: 0.5em;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 0 white;
+    border-bottom: 0.2em ridge white;
+}
+
+figcaption:last-child {
+	letter-spacing: -0.05em;
+	background-color: rgba(255, 255, 255, 0.20);
+}
+
+figure * + * {
+	margin-top: 0.5em;
+}
