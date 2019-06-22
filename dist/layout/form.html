@@ -16,17 +16,17 @@
 			<div>
 				<label>Your name</label>
 				<input type="text" placeholder="Jane Doe" required>
-				<legend>Your name is required.</legend>
+				<mark>Your name is required.</mark>
 			</div>
 			<div>
 				<label>Your email</label>
 				<input type="email" placeholder="jane-doe@email.com" required>
-				<legend>You must type in a valid email.</legend>
+				<mark>You must type in a valid email.</mark>
 			</div>
 			<div>
 				<label>Your phone</label>
 				<input type="tel" placeholder="0120304050">
-				<legend>Phone number are 10 numbers.</legend>
+				<mark>Phone number are 10 numbers.</mark>
 			</div>
 		</fieldset>
 		<fieldset data-direction="horizontal">
@@ -34,7 +34,7 @@
 			<div>
 				<label>Your birthday</label>
 				<input type="date" placeholder="01/01/1980" required>
-				<legend>We need to know your age.</legend>
+				<mark>We need to know your age.</mark>
 			</div>
 			<div>
 				<label>What is your favourite pet ?</label>
@@ -47,6 +47,21 @@
 					<option>Turtle</option>
 				</datalist>
 			</div>
+			<section data-direction="vertical">
+				<div>
+					<label>What are your favourite flavours ?</label>
+					<select multiple>
+				      <option>Vanilla</option>
+				      <option>Chocolate</option>
+				      <option>Coffee</option>
+				      <option>Mint</option>
+				      <option>Fudge</option>
+				      <option>Lemon</option>
+				      <option>Coconut</option>
+				      <option>Pistacchio</option>
+				    </select>
+				</div>
+			</section>
 		</fieldset>
 		<fieldset data-direction="vertical">
 			<legend>Message</legend>
@@ -70,7 +85,7 @@
 			<div>
 				<label>Your text</label>
 				<textarea placeholder="Good evening, I'm Jane Doe and..." required></textarea>
-				<legend>Please, type a message.</legend>
+				<mark>Please, type a message.</mark>
 			</div>
 		</fieldset>
 		<fieldset data-direction="vertical-border">
@@ -85,7 +100,7 @@
 			<div>
 				<label>You expect an answer before</label>
 				<input type="date" placeholder="01/01/2020" required>
-				<legend>We need to know your deadline.</legend>
+				<mark>We need to know your deadline.</mark>
 			</div>
 		</fieldset>
 		<div>

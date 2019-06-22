@@ -499,37 +499,39 @@ input[type]:invalid {
   background-color: #fce8f6;
 }
 
-select + legend,
-textarea + legend,
-input + legend {
+select + mark,
+textarea + mark,
+input + mark {
   display: none;
   margin: 0;
   padding: .3em .6em;
   color: #ff00ab;
   font-size: 0.5em;
   transition: background .5s ease;
+  background-color: transparent;
+  border: none;
 }
 
-:invalid + legend {
+:invalid + mark {
   display: block;
 }
 
-[data-direction^="horizontal"] :invalid + legend {
+[data-direction^="horizontal"] :invalid + mark {
   position: absolute;
   bottom: 0;
   width: 100%;
   text-align: right;
 }
 
-[data-direction$="vertical-border"] :invalid + legend {
+[data-direction$="vertical-border"] :invalid + mark {
   background-color: #fce8f6;
 }
 
-[data-direction$="vertical-border"] :invalid:hover + legend {
+[data-direction$="vertical-border"] :invalid:hover + mark {
   background-color: rgb(246, 245, 244);
 }
 
-[data-direction$="vertical-border"] :invalid:focus + legend {
+[data-direction$="vertical-border"] :invalid:focus + mark {
   background-color: #3d3c3b;
 }
 
