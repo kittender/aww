@@ -2,6 +2,7 @@ a {
     cursor: default;
     position: relative;
     text-decoration: none;
+    transition: background .3s ease;
 }
 
 a:visited {
