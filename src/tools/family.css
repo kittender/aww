@@ -1,0 +1,19 @@
+[data-family="courrier"] {
+	font-family: var(--courrier) !important;
+}
+
+[data-family="monospace"] {
+	font-family: var(--monospace) !important;
+}
+
+[data-family="serif"] {
+	font-family: var(--serif) !important;
+}
+
+[data-family="sans-serif"] {
+	font-family: var(--sans-serif) !important;
+}
+
+[data-family="brand"] {
+	font-family: var(--brand) !important;
+}
