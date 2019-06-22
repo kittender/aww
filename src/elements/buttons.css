@@ -49,8 +49,9 @@ button,
 
 [type="reset"] {
     letter-spacing: 0;
-    background-color: var(--neutral);
-    border-color: var(--neutral);
+    color: white;
+    background-color: var(--again);
+    border-color: var(--again);
 }
 
 
