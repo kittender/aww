@@ -1,0 +1,14 @@
+dt {
+	letter-spacing: 0.1em;
+	font-weight: 700;
+}
+
+dd {
+	margin: 0;
+	font-family: var(--serif);
+	font-size: 0.9em;
+}
+dd::before {
+	content: "\2591\0020";
+	font-family: var(--sans-serif);
+}

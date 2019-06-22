@@ -1,15 +1,17 @@
+ol,
 ul {
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
-    list-style-type: none;
+    list-style: none;
 }
 
+ol ol,
 ul ul {
     margin-left: 1.5em;
     margin-top: .5em;
     padding-top: .5em;
-    border-top: 2px solid color(var(--medium) tint(80%)); 
+    border-top: 1px dashed color(var(--medium) tint(80%));
 }
 
 li {
@@ -20,32 +22,101 @@ li {
 li + li {
     margin-top: .25em;
     padding-top: .25em; 
-    border-top: 1px dotted color(var(--medium) tint(80%));
-}
-
-li::before {
-    content: "\2726";
-    margin-right: 1em;
-    color: color(var(--medium) tint(50%));
 }
 
 li li {
     font-size: .98em;
 }
 
-li li::before {
+ul {
+    list-style-type: none;
+}
+
+ul li::before {
+    content: "\2726";
+    margin-right: 1em;
+}
+
+ul li li::before {
     content: "\2727";
 }
 
-li li li::before {
+ul li li li::before {
     content: "\25FE";
 }
 
-li li li li::before {
+ul li li li li::before {
     content: "\25FD";
 }
 
+ol {
+    counter-reset: good-ol-counter;
+}
 
+ol li {
+    counter-increment: good-ol-counter;
+}
+
+ol li::before {
+    content: counter(good-ol-counter);
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 1em;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 0.9em;
+    font-weight: 700;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 100%;
+}
+
+ol[type="1"] > li::before {
+    content: counter(good-ol-counter, decimal);
+}
+
+ol[type="A"] > li::before {
+    content: counter(good-ol-counter, upper-latin);
+}
+
+ol[type="I"] > li::before {
+    content: counter(good-ol-counter, upper-roman);
+    font-family: var(--serif);
+}
+
+ol li li::before {
+    background-color: transparent;
+    border: 1px solid;
+}
+
+ol li li li::before {
+    background-color: rgba(0,0,0,0.1);
+    border: none;
+    border-radius: 0;
+}
+
+ol li li li li::before {
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 0;
+}
+
+[role="navigation"],
+[role="navigation"] ol,
+[role="navigation"] ul {
+    border-left: 1px solid rgba(0,0,0,0.1);
+}
+
+[role="navigation"] ol,
+[role="navigation"] ul {
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+[role="navigation"] li::before {
+    content: "\2501";
+    margin-right: 0.5em;
+    color: rgba(0,0,0,0.1);
+}
 
 td ul {
     margin: .5em 0;
