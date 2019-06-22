@@ -5,11 +5,11 @@ a {
 }
 
 a:visited {
-    color: #1a4368;
+    color: var(--again);
 }
 
 a:link, a:link:hover {
-    color: #00529b;
+    color: var(--action);
 }
 
 a:link {
@@ -34,5 +34,30 @@ a:hover::after {
 
 a:link:hover:active,
 a:link:active {
-    background-color: var(--primary);
+    background-color: #a2efff;
+}
+
+a[href=""] {
+    cursor: default;
+    text-decoration: line-through;
+    color: var(--code-error);
+}
+
+a[href=""]::after,
+a[href^="#"]::after {
+    content: none;
+}
+
+a[href^="www"]::before,
+a[href^="http"]::before {
+    content: "\22EE";
+    opacity: 0.5;
+}
+
+a[href^="mailto:"]::before {
+    content: "\2709\0020";
+}
+
+a:link[target="_blank"]::after {
+    border-bottom-width: 1px;
 }
