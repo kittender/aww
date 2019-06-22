@@ -12,5 +12,11 @@
     "gulp-crass": "^0.2.2",
     "gulp-myth": "^1.1.0",
     "gulp-rename": "^1.2.2"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "minify": "gulp minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
