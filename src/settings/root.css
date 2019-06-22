@@ -32,5 +32,8 @@
     --edit-del-background: #ffe5d7;
     --edit-ins: #357215;
     --edit-ins-background: #e6ffd7;
+
+    --form-valid: #e8fce8;
+    --form-invalid: #fce8f6;
     
 }
