@@ -1,14 +1,21 @@
 a {
     cursor: default;
+    display: inline-block;
     position: relative;
     text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+    background-color: var(--primary);
 }
 
 a:visited {
     color: #1a4368;
 }
 
-a:link, a:link:hover {
+a:link,
+a:link:hover {
     color: #00529b;
 }
 
@@ -16,7 +23,7 @@ a:link {
     cursor: pointer;
 }
 
-a:link::after {
+p a:link::after {
     content: "";
     position: absolute;
     bottom: -1px;
@@ -27,12 +34,64 @@ a:link::after {
     transition: all 0.2s linear;
 }
 
-a:focus:after,
-a:hover::after {
+p a:focus:after,
+p a:hover::after {
     width: 100%;
 }
 
-a:link:hover:active,
-a:link:active {
+p a:link:hover:active,
+p a:link:active {
     background-color: var(--primary);
+}
+
+a[href=""],
+a[href="#"] {
+    cursor: text;
+}
+
+p a[href=""]:hover::after,
+p a[href="#"]:hover::after {
+    width: 1em;
+}
+
+a[target="_blank"] {
+    cursor: alias;
+}
+
+p a[href^="#"]::after {
+    border-bottom-style: dotted;
+}
+
+a[href^="mailto:"]::before {
+    content: "\000040";
+}
+
+p a[href^="//:"]::before,
+p a[href^="www"]::before,
+p a[href^="http"]::before {
+    content: "\276F";
+    font-size: 0.75em;
+    margin-right: 0.25em;
+}
+
+p a[href^="//:"]::before,
+p a[href^="www"]::before,
+p a[href^="http"]::before,
+a[href^="mailto:"]::before {
+    font-family: var(--monospace);
+}
+
+a > img:only-child {
+    outline: 2px solid transparent;
+    transition: all 0.3s linear;
+}
+
+a:visited > img:only-child {
+    filter: grayscale(50%);
+}
+
+a:focus > img:only-child,
+a:hover > img:only-child {
+    outline: 2px solid var(--primary);
+    filter: contrast(125%) saturate(125%);
 }
