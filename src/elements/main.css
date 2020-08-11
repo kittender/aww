@@ -1,3 +1,8 @@
 main {
-    padding: 5rem 3rem;
+  position: relative;
+  padding: 5rem 3rem;
+}
+
+header + main {
+  margin-top: 0;
 }

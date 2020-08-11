@@ -1,0 +1,25 @@
+main > aside {
+  overflow-y: auto;
+  position: absolute;
+  width: 25%;
+  top: 0;
+  bottom: 0;
+  margin-top: 0;
+  padding: 3rem 2rem 3rem 3rem;
+}
+
+main > aside:first-child {
+  left: 0;
+}
+
+main > aside:last-child {
+  right: 0;
+}
+
+main > aside + section {
+  margin-left: calc(25% + 3rem);
+}
+
+main > section:first-child {
+  margin-right: calc(25% + 3rem);
+}

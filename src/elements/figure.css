@@ -1,37 +1,38 @@
 figure {
-    margin: 1.5em 0;
-    padding: 1em;
-    background-color: #ececec;
-    border: 1px solid #cecece;
-    border-radius: 2px;
+  width: fit-content;
+  margin: 1.5em auto;
+  padding: 1em;
+  background-color: #ececec;
+  border: 1px solid #cecece;
+  border-radius: 2px;
 }
 
 figure img {
-    border: 2px solid white;
+  border: 2px solid white;
 }
 
 figure figcaption {
-    position: relative;
+  position: relative;
 }
 
 figure figcaption:first-child {
-    text-align: center;
-    font-size: 1.1em;
-    font-weight: 700;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 700;
 }
 
 figure figcaption:first-child::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -0.3em;
-    width: calc(100% / 3);
-    height: 1px;
-    transform: translate(-50%, 0);
-    background-color: white;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.3em;
+  width: calc(100% / 3);
+  height: 1px;
+  transform: translate(-50%, 0);
+  background-color: white;
 }
 
 figure figcaption:last-child {
-    margin-top: 0.5em;
-    font-size: 0.9em;
+  margin-top: 0.5em;
+  font-size: 0.9em;
 }
