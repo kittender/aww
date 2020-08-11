@@ -5,12 +5,12 @@ q {
 
 q::before,
 q::after {
+    opacity: 0.25;
     vertical-align: sub;
     font-family: var(--monospace);
     font-size: 2em;
     font-style: normal;
     line-height: 0;
-    color: var(--neutral);
 }
 
 q::before {

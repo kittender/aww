@@ -1,6 +1,6 @@
 cite {
-    padding-bottom: 3px;
+    padding-bottom: .2em;
     font-style: italic;
-    letter-spacing: 0.5px;
-    border-bottom: 1px solid;
+    letter-spacing: .09em;
+    border-bottom: .09em solid;
 }

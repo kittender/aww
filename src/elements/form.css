@@ -1,0 +1,81 @@
+form button,
+form [type="button"] {
+    background-color: var(--neutral);
+}
+
+form [disabled],
+form :disabled {
+	color: var(--neutral);
+}
+
+[data-direction^="horizontal"] > div {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+[data-direction^="vertical"] textarea,
+[data-direction^="vertical"] select,
+[data-direction^="vertical"] label,
+[data-direction^="vertical"] input {
+	display: block;
+	width: 100%;
+}
+
+[data-direction^="vertical"] label {
+	padding: .3em .6em;
+}
+
+[data-direction$="-border"] > div {
+    border: .05em solid color(var(--neutral) tint(20%));
+}
+
+[data-direction$="-border"] textarea,
+[data-direction$="-border"] select,
+[data-direction$="-border"] input {
+	background-color: transparent;
+	border-color: transparent !important;
+}
+
+select:invalid,
+textarea:invalid,
+input[type]:invalid {
+	background-color: var(--form-invalid);
+}
+
+select + mark,
+textarea + mark,
+input + mark {
+	display: none;
+	margin: 0;
+	padding: .3em .6em;
+	color: var(--code-error);
+	font-size: 0.5em;
+    transition: background .5s ease;
+    background-color: transparent;
+    border: none;
+}
+
+:invalid + mark {
+	display: block;
+}
+
+[data-direction^="horizontal"] :invalid + mark {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: right;
+}
+
+[data-direction$="vertical-border"] :invalid + mark {
+	background-color: var(--form-invalid);
+}
+
+[data-direction$="vertical-border"] :invalid:hover + mark {
+	background-color: color(var(--neutral) tint(80%));
+}
+
+[data-direction$="vertical-border"] :invalid:focus + mark {
+	background-color: var(--medium);
+}
+

@@ -1,5 +1,5 @@
 time {
-    letter-spacing: -0.5px;
+    letter-spacing: -0.05em;
     font-family: var(--courrier);
 }
 
@@ -9,7 +9,7 @@ time[datetime] {
 }
 
 time[datetime]:hover {
-    border-bottom: 1px dashed;
+    border-bottom: .05em dashed;
 }
 
 time[datetime]::after {
@@ -24,8 +24,8 @@ time[datetime]::after {
     background-color: var(--dark);
     transform: translateY(calc(-100% - 5px));
     box-shadow: 0 -2px 4px rgba(0,0,0,0.15);
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
+    border-top-left-radius: .2em;
+    border-top-right-radius: .2em;
     transition: all 0.1s ease;
 }
 

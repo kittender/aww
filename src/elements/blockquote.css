@@ -7,16 +7,16 @@ blockquote {
     font-size: 1.1em;
     line-height: 1.2;
     text-align: justify;
-    letter-spacing: 0.5px;
-    border-left: 8px solid color(var(--neutral) tint(50%));
+    letter-spacing: -0.03em;
+    border-left: .5em solid color(var(--neutral) tint(50%));
     background-color: color(var(--neutral) tint(80%));
 }
 
 blockquote::after {
+    opacity: 0.1;
     position: absolute;
     font-size: 6rem;
     line-height: 6rem;
-    color: var(--neutral);
 }
 
 blockquote::after {

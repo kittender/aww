@@ -10,31 +10,32 @@ code {
   background-size: auto 3em;
   background-origin: content-box;
   background-image: linear-gradient(rgba(255, 255, 255, 0.05) 50%, transparent 0);
-  border-radius: 2px;
+  border-radius: .2em;
 }
 
 code u {
-  text-decoration: none;
-  color: var(--code-error);
+    text-decoration: none;
+    color: var(--code-error);
 }
 
 code b {
-  font-weight: normal;
-  color: var(--light);
+    font-weight: normal;
+    color: var(--light);
 }
 
 code i {
-  font-style: normal;
-  color: var(--code-quiet);
+    font-style: normal;
+    color: var(--code-quiet);
 }
 
 
 code em {
-  font-style: normal;
-  color: var(--primary);
+    font-style: normal;
+    font-weight: normal;
+    color: var(--primary);
 }
 
 code strong {
-  font-weight: normal;
-  color: var(--accent);
+    font-weight: normal;
+    color: var(--accent);
 }

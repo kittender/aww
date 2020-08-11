@@ -4,14 +4,15 @@
     /*! Always check contrast: http://leaverou.github.io/contrast-ratio/ */
     --dark: #000d07;
     --medium: #3d3c3b;
-    --action: #00529b;
+    --action: #0073d9;
+    --again: #447097;
     
      /* use against dark tones */
     /*! Always check contrast: http://leaverou.github.io/contrast-ratio/ */
     --light: #fffdf7;
     --neutral: #d1cfca;
-    --primary: #00eae6;
-    --accent: #9cea00;
+    --primary: #4de1ff;
+    --accent: #a0f000;
     
     
     --courrier: "Courier New", Courier, monospace;
@@ -31,5 +32,8 @@
     --edit-del-background: #ffe5d7;
     --edit-ins: #357215;
     --edit-ins-background: #e6ffd7;
+
+    --form-valid: #e8fce8;
+    --form-invalid: #fce8f6;
     
 }

@@ -1,0 +1,17 @@
+label {
+    padding: 0 .6em;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: var(--sans-serif);
+    color: var(--medium);
+}
+
+label + select,
+label + textarea,
+label + input {
+	margin-top: 0;
+}
+
+[disabled] label {
+	color: var(--neutral);
+}

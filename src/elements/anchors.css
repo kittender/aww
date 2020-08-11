@@ -1,36 +1,49 @@
 a {
     cursor: default;
-    display: inline-block;
     position: relative;
     text-decoration: none;
-}
-
-a:focus {
-    outline: none;
-    background-color: var(--primary);
+    transition: background .3s ease;
 }
 
 a:visited {
-    color: #1a4368;
+    color: var(--again);
 }
 
-a:link,
-a:link:hover {
-    color: #00529b;
+a:link, a:link:hover {
+    color: var(--action);
 }
 
 a:link {
     cursor: pointer;
 }
 
+a:link:hover:active,
+a:link:active {
+    background-color: var(--primary);
+}
+
+a[href=""] {
+    cursor: default;
+    text-decoration: line-through;
+    color: var(--code-error);
+}
+
+a:link[target="_blank"] {
+  cursor: alias;
+}
+
+a:link[target="_blank"]::after {
+    border-bottom-width: .05em;
+}
+
 p a:link::after {
     content: "";
     position: absolute;
-    bottom: -1px;
+    bottom: -0.05em;
     left: 0;
     width: 1em;
-    height: 1px;
-    border-bottom: 2px solid;
+    height: .05em;
+    border-bottom: .1em solid;
     transition: all 0.2s linear;
 }
 
@@ -39,59 +52,17 @@ p a:hover::after {
     width: 100%;
 }
 
-p a:link:hover:active,
-p a:link:active {
-    background-color: var(--primary);
-}
-
-a[href=""],
-a[href="#"] {
-    cursor: text;
-}
-
-p a[href=""]:hover::after,
-p a[href="#"]:hover::after {
-    width: 1em;
-}
-
-a[target="_blank"] {
-    cursor: alias;
-}
-
+p a[href=""]::after,
 p a[href^="#"]::after {
-    border-bottom-style: dotted;
+    content: none;
 }
 
-a[href^="mailto:"]::before {
-    content: "\000040";
-}
-
-p a[href^="//:"]::before,
 p a[href^="www"]::before,
 p a[href^="http"]::before {
-    content: "\276F";
-    font-size: 0.75em;
-    margin-right: 0.25em;
+    content: "\22EE";
+    opacity: 0.5;
 }
 
-p a[href^="//:"]::before,
-p a[href^="www"]::before,
-p a[href^="http"]::before,
-a[href^="mailto:"]::before {
-    font-family: var(--monospace);
-}
-
-a > img:only-child {
-    outline: 2px solid transparent;
-    transition: all 0.3s linear;
-}
-
-a:visited > img:only-child {
-    filter: grayscale(50%);
-}
-
-a:focus > img:only-child,
-a:hover > img:only-child {
-    outline: 2px solid var(--primary);
-    filter: contrast(125%) saturate(125%);
+p a[href^="mailto:"]::before {
+    content: "\2709\0020";
 }

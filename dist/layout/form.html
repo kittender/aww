@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>aww</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../aww.css">
+</head>
+
+<body>
+	<form style="width: 50%; margin: 5% auto;">
+		<h1>Contact us</h1>
+		<fieldset data-direction="horizontal-border">
+			<legend>Contact information</legend>
+			<div>
+				<label>Your name</label>
+				<input type="text" placeholder="Jane Doe" required>
+				<mark>Your name is required.</mark>
+			</div>
+			<div>
+				<label>Your email</label>
+				<input type="email" placeholder="jane-doe@email.com" required>
+				<mark>You must type in a valid email.</mark>
+			</div>
+			<div>
+				<label>Your phone</label>
+				<input type="tel" placeholder="0120304050">
+				<mark>Phone number are 10 numbers.</mark>
+			</div>
+		</fieldset>
+		<fieldset data-direction="horizontal">
+			<legend>Personal details</legend>
+			<div>
+				<label>Your birthday</label>
+				<input type="date" placeholder="01/01/1980" required>
+				<mark>We need to know your age.</mark>
+			</div>
+			<div>
+				<label>What is your favourite pet ?</label>
+				<input type="text" list="pet-list" placeholder="Guinea pigs">
+				<datalist id="pet-list">
+					<option>Cat</option>
+					<option>Dog</option>
+					<option>Ferret</option>
+					<option>Fish</option>
+					<option>Turtle</option>
+				</datalist>
+			</div>
+			<section data-direction="vertical">
+				<div>
+					<label>What are your favourite flavours ?</label>
+					<select multiple>
+				      <option>Vanilla</option>
+				      <option>Chocolate</option>
+				      <option>Coffee</option>
+				      <option>Mint</option>
+				      <option>Fudge</option>
+				      <option>Lemon</option>
+				      <option>Coconut</option>
+				      <option>Pistacchio</option>
+				    </select>
+				</div>
+			</section>
+		</fieldset>
+		<fieldset data-direction="vertical">
+			<legend>Message</legend>
+			<div>
+				<label>Subject</label>
+				<select>
+					<option>Simple contact</option>
+					<option>Some question(s)</option>
+					<optgroup label="Orders">
+						<option>Recent order</option>
+						<option>Latest order</option>
+						<option>Cancelled order</option>
+					</optgroup>
+					<optgroup label="Payments">
+						<option>Recent payment</option>
+						<option>Latest payment</option>
+						<option>Cancelled payment</option>
+					</optgroup>
+				</select>
+			</div>
+			<div>
+				<label>Your text</label>
+				<textarea placeholder="Good evening, I'm Jane Doe and..." required></textarea>
+				<mark>Please, type a message.</mark>
+			</div>
+		</fieldset>
+		<fieldset data-direction="vertical-border">
+			<legend>Parameters</legend>
+			<div>
+				<label>Choose a service</label>
+				<select>
+					<option>Customer service</option>
+					<option>Technical support</option>
+				</select>
+			</div>
+			<div>
+				<label>You expect an answer before</label>
+				<input type="date" placeholder="01/01/2020" required>
+				<mark>We need to know your deadline.</mark>
+			</div>
+		</fieldset>
+		<div>
+			<section style="float: right;">
+			    <input type="button" value="Cancel" />
+			    <input type="reset" value="Reset" />
+				<input type="submit" value="Send" />
+			</section>
+		</div>
+	</form>
+</body>
+
+</html>

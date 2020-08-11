@@ -6,7 +6,7 @@ abbr {
     text-indent: 0;
     text-decoration: none;
     text-transform: uppercase;
-    border-bottom: 1px dotted;
+    border-bottom: .05em dotted;
 }
 abbr::after {
     content: attr(title);

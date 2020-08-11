@@ -1,0 +1,21 @@
+fieldset {
+	padding: 1.5em 1em 2em 1em;
+    border: .05em solid rgba(0,0,0,0.15);
+    border-radius: .2em;
+}
+
+fieldset * + * {
+	margin-top: .3em;
+}
+
+fieldset > legend {
+    padding: .3em .8em 0 0;
+	border: .05em solid rgba(0,0,0,0.15);
+    border-bottom: none;
+    border-radius: .2em;
+}
+
+fieldset > legend::before {
+	content: "\2591\0020";
+	margin-right: .3em;
+}

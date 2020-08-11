@@ -1,0 +1,53 @@
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="number"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="text"] {
+	flex: 1;
+    padding: .6em .8em;
+    font-size: 1.4rem;
+    font-family: var(--courrier);
+    border: .05em solid color(var(--neutral) tint(20%));
+    transition: background .5s ease;
+}
+
+input[type="month"]:hover,
+input[type="week"]:hover,
+input[type="time"]:hover,
+input[type="date"]:hover,
+input[type="datetime-local"]:hover,
+input[type="number"]:hover,
+input[type="search"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="url"]:hover,
+input[type="text"]:hover {
+	background-color: color(var(--neutral) tint(80%));
+    border-color: var(--medium);
+}
+
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="date"]:focus,
+input[type="datetime-local"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="text"]:focus {
+    outline: none;
+	color: white;
+	background-color: var(--medium);
+    border-color: black;
+}

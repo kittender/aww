@@ -2,37 +2,37 @@ figure {
   width: fit-content;
   margin: 1.5em auto;
   padding: 1em;
-  background-color: #ececec;
-  border: 1px solid #cecece;
-  border-radius: 2px;
+    background-color: rgba(0,0,0,0.15);
+  border: 1px solid rgba(0,0,0,0.25);
+  border-radius: .2em;
 }
 
 figure img {
-  border: 2px solid white;
+  border: 0.05em solid white;
 }
 
-figure figcaption {
-  position: relative;
+figcaption {
+	text-align: center;
+	font-size: 0.9em;
+	font-family: var(--courrier);
 }
 
-figure figcaption:first-child {
-  text-align: center;
-  font-size: 1.1em;
-  font-weight: 700;
+figcaption:first-child {
+ 	padding-bottom: 0.5em;
+	font-weight: 700;
+	text-transform: uppercase;
+    border-bottom: 0.2em ridge white;
 }
 
-figure figcaption:first-child::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -0.3em;
-  width: calc(100% / 3);
-  height: 1px;
-  transform: translate(-50%, 0);
-  background-color: white;
-}
+
 
 figure figcaption:last-child {
-  margin-top: 0.5em;
   font-size: 0.9em;
+
+	letter-spacing: -0.05em;
+	background-color: rgba(255, 255, 255, 0.20);
+}
+
+figure * + * {
+	margin-top: 0.5em;
 }

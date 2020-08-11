@@ -1,0 +1,18 @@
+select {
+	flex: 1;
+    padding: .6em .8em;
+    font-size: 1.4rem;
+    font-family: var(--courrier);
+    border: .05em solid color(var(--neutral) tint(20%));
+}
+
+select:hover {
+    background-color: color(var(--neutral) tint(80%));
+    border-color: var(--medium);
+}
+
+select:focus {
+    outline: none;
+    color: white;
+    background-color: var(--medium);
+}

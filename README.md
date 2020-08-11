@@ -21,15 +21,16 @@ Just write consistent HTML, and it's done.
 
 ### Elements
 
-* Anchors | ``a``
+* Anchors | ``a`` ``a[href="mailto"]``
 * Tables | ``table`` ``caption`` ``th`` ``td``
-* Lists | ``ul``
+* Lists | ``ul`` ``ol`` ``ol[type]`` ``li`` ``dl`` ``dt`` ``dd`` ``[role="navigation"]``
 
 ### Hierarchy
 
 * Headings | ``h1`` ``h2`` ``h3`` ``h4`` ``h5`` ``h6``
 * Paragraphs | ``p``
 * Horizontal rules | ``hr``
+* Typography | ``b`` ``i`` ``strong`` ``em`` ``small``
 
 ### Forms
 
@@ -39,8 +40,10 @@ Just write consistent HTML, and it's done.
 
 * Abbreviations | ``abbr``
 * Addresses | ``address``
-* Quotations | ``blockquote``
+* Quotations | ``blockquote`` ``q`` ``cite``
 * Marked | ``mark``
+* Time | ``time`` ``time[datetime]``
+* Definition | ``dfn``
 
 ### Other
 

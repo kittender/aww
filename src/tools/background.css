@@ -1,0 +1,27 @@
+[data-background="dark"] {
+	background-color: var(--dark) !important;
+}
+
+[data-background="medium"] {
+	background-color: var(--medium) !important;
+}
+
+[data-background="neutral"] {
+	background-color: var(--neutral) !important;
+}
+
+[data-background="light"] {
+	background-color: var(--light) !important;
+}
+
+[data-background="action"] {
+	background-color: var(--action) !important;
+}
+
+[data-background="primary"] {
+	background-color: var(--primary) !important;
+}
+
+[data-background="accent"] {
+	background-color: var(--accent) !important;
+}

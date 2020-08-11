@@ -5,5 +5,5 @@ samp {
     font-size: 1.2rem;
     color: var(--light);
     background-color: #1c1d27;
-    border-radius: 2px;
+    border-radius: .2em;
 }
