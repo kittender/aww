@@ -1,15 +1,12 @@
 dfn {
-    margin-right: 6px;
-    padding: 3px 12px 3px 6px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 0.85em;
-    font-family: var(--sans-serif);
-    border-left: 3px solid;
-    border-bottom: 1px solid;
-    border-right: 1px dashed var(--neutral);
-}
-
-dfn:hover {
-    background-color: color(var(--primary) tint(80%));
+  margin-right: .85em;
+  padding: .25em .85em;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.85em;
+  font-style: oblique;
+  font-family: var(--sans-serif);
+  background-color: rgba(0, 0, 0, 0.05);
+  border-right: 3px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }

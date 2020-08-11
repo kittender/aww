@@ -1,0 +1,51 @@
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+dl * + * {
+  margin-top: 0;
+}
+
+dl > dl {
+  grid-column: 2;
+  margin-top: .25em;
+  margin-left: .25em;
+}
+
+dt,
+dd {
+  padding: .5em;
+  border: 1px solid var(--neutral);
+}
+
+dt {
+  grid-column: 1;
+  padding-right: 1em;
+  font-weight: 600;
+  border-right: 5px solid var(--neutral);
+}
+
+dd {
+  grid-column: 2;
+  margin-left: .25em;
+  font-family: var(--serif);
+}
+
+dt ~ dt,
+dd ~ dd {
+  margin-top: -1px;
+}
+
+dt:hover,
+dt:hover + dd,
+dt:hover + dt + dd,
+dt:hover + dt + dt + dd,
+dt:hover + dt + dt + dt + dd,
+dt:hover + dt + dt + dt + dt + dd,
+dt:hover + dd + dd,
+dt:hover + dd + dd + dd,
+dt:hover + dd + dd + dd + dd,
+dt:hover + dd + dd + dd + dd + dd {
+  background-color: rgba(0, 0, 0, 0.05);
+}
