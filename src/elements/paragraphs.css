@@ -1,6 +1,7 @@
 p {
     font-family: var(--serif);
     text-align: justify;
+    hyphens: auto;
 }
 
 p + p {
