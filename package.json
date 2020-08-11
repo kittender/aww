@@ -1,16 +1,19 @@
 {
-  "name": "aww",
-  "version": "0.0.0",
-  "description": "already works well",
-  "main": "index.js",
-  "author": "kittender",
-  "license": "MIT",
-  "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.9.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-crass": "^0.2.2",
-    "gulp-myth": "^1.1.0",
-    "gulp-rename": "^1.2.2"
-  }
+    "name": "aww",
+    "version": "0.0.0",
+    "description": "already works well",
+    "main": "index.js",
+    "author": "kittender",
+    "license": "MIT",
+    "scripts": {
+        "start": "gulp"
+    },
+    "dependencies": {
+        "gulp": "^3.9.1",
+        "gulp-clean-css": "^3.9.2",
+        "gulp-concat": "^2.6.1",
+        "gulp-crass": "^0.2.2",
+        "gulp-myth": "^1.1.0",
+        "gulp-rename": "^1.2.2"
+    }
 }

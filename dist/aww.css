@@ -7,6 +7,10 @@ html {
 *, *::after, *::before {
   box-sizing: inherit;
 }
+:disabled, [aria-disabled=true], [disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
 html {
   font-size: 0.625em;
 }
@@ -61,8 +65,13 @@ address {
 }
 a {
   cursor: default;
+  display: inline-block;
   position: relative;
   text-decoration: none;
+}
+a:focus {
+  background-color: #00eae6;
+  outline: 0;
 }
 a:visited {
   color: #1a4368;
@@ -73,7 +82,7 @@ a:link, a:link:hover {
 a:link {
   cursor: pointer;
 }
-a:link::after {
+p a:link::after {
   border-bottom: 2px solid;
   bottom: -1px;
   content: "";
@@ -83,11 +92,73 @@ a:link::after {
   transition: all 0.2s linear;
   width: 1em;
 }
-a:focus:after, a:hover::after {
+p a:focus:after, p a:hover::after {
   width: 100%;
 }
-a:link:active, a:link:hover:active {
+p a:link:active, p a:link:hover:active {
   background-color: #00eae6;
+}
+a[href=""], a[href="#"] {
+  cursor: text;
+}
+p a[href=""]:hover::after, p a[href="#"]:hover::after {
+  width: 1em;
+}
+a[target="_blank"] {
+  cursor: alias;
+}
+p a[href^="#"]::after {
+  border-bottom-style: dotted;
+}
+a[href^="mailto:"]::before {
+  content: "\000040";
+}
+p a[href^="//:"]::before, p a[href^=http]::before, p a[href^=www]::before {
+  content: "\276F";
+  font-size: 0.75em;
+  margin-right: 0.25em;
+}
+a[href^="mailto:"]::before,
+p a[href^="//:"]::before,
+p a[href^=http]::before,
+p a[href^=www]::before {
+  font-family: Lucida Console, Monaco, monospace;
+}
+a > img:only-child {
+  outline: 2px solid transparent;
+  transition: all 0.3s linear;
+}
+a:visited > img:only-child {
+  filter: grayscale(50%);
+}
+a:focus > img:only-child, a:hover > img:only-child {
+  filter: contrast(125%) saturate(125%);
+  outline: 2px solid #00eae6;
+}
+article h1, article h2, article h3, article h4, article h5, article h6 {
+  font-family: Times New Roman, Times, serif;
+  font-weight: 600;
+}
+main > aside {
+  bottom: 0;
+  margin-top: 0;
+  overflow-y: auto;
+  padding: 3rem 2rem 3rem 3rem;
+  position: absolute;
+  top: 0;
+  width: 25%;
+}
+main > aside:first-child {
+  left: 0;
+}
+main > aside:last-child {
+  right: 0;
+}
+main > aside + section {
+  margin-left: calc(25% + 3rem);
+}
+main > section:first-child {
+  margin-right: calc(25% + 3rem);
 }
 blockquote {
   background-color: #f6f5f4;
@@ -188,11 +259,15 @@ cite {
 }
 code {
   background-color: #1c1d27;
+  background-image: linear-gradient(hsla(0, 0%, 100%, 0.05) 50%, transparent 0);
+  background-origin: content-box;
+  background-size: auto 3em;
   border-radius: 2px;
   color: #f6ff60;
   display: block;
   font-family: Lucida Console, Monaco, monospace;
   font-size: 1.2rem;
+  line-height: 1.5;
   overflow-x: scroll;
   padding: 1em;
 }
@@ -224,21 +299,93 @@ del {
   text-decoration: line-through;
 }
 dfn {
-  border-bottom: 1px solid;
-  border-left: 3px solid;
-  border-right: 1px dashed #d1cfca;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-right: 3px solid rgba(0, 0, 0, 0.15);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.85em;
-  font-style: normal;
+  font-style: oblique;
   font-weight: 700;
-  margin-right: 6px;
-  padding: 3px 9pt 3px 6px;
-}
-dfn:hover {
-  background-color: #ccfbfa;
+  margin-right: 0.85em;
+  padding: 0.25em 0.85em;
 }
 div {
   overflow: hidden;
+}
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+dl * + * {
+  margin-top: 0;
+}
+dl > dl {
+  grid-column: 2;
+  margin-left: 0.25em;
+  margin-top: 0.25em;
+}
+dd, dt {
+  border: 1px solid #d1cfca;
+  padding: 0.5em;
+}
+dt {
+  border-right: 5px solid #d1cfca;
+  font-weight: 600;
+  grid-column: 1;
+  padding-right: 1em;
+}
+dd {
+  font-family: Times New Roman, Times, serif;
+  grid-column: 2;
+  margin-left: 0.25em;
+}
+dd ~ dd, dt ~ dt {
+  margin-top: -1px;
+}
+dt:hover,
+dt:hover + dd,
+dt:hover + dd + dd,
+dt:hover + dd + dd + dd,
+dt:hover + dd + dd + dd + dd,
+dt:hover + dd + dd + dd + dd + dd,
+dt:hover + dt + dd,
+dt:hover + dt + dt + dd,
+dt:hover + dt + dt + dt + dd,
+dt:hover + dt + dt + dt + dt + dd {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+figure {
+  background-color: #ececec;
+  border: 1px solid #cecece;
+  border-radius: 2px;
+  margin: 1.5em auto;
+  padding: 1em;
+  width: fit-content;
+}
+figure img {
+  border: 2px solid #fff;
+}
+figure figcaption {
+  position: relative;
+}
+figure figcaption:first-child {
+  font-size: 1.1em;
+  font-weight: 700;
+  text-align: center;
+}
+figure figcaption:first-child::after {
+  background-color: #fff;
+  bottom: -0.3em;
+  content: "";
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  width: 33.33333333333333%;
+}
+figure figcaption:last-child {
+  font-size: 0.9em;
+  margin-top: 0.5em;
 }
 footer {
   padding: 2.5rem 3rem;
@@ -340,6 +487,7 @@ br + br + hr + hr {
 img {
   height: auto;
   max-width: 100%;
+  position: relative;
 }
 ins {
   background-color: #e6ffd7;
@@ -358,49 +506,54 @@ kbd {
   font-size: 1.2rem;
   padding: 0.4em 0.5em 0.15em;
 }
-ul {
+ol, ul {
   list-style-type: none;
   margin-left: 0;
   margin-right: 0;
   padding-left: 0;
 }
-ul ul {
-  border-top: 2px solid #d8d8d8;
+ol ol, ul ul {
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 0.5em;
   margin-left: 1.5em;
   margin-top: 0.5em;
-  padding-top: 0.5em;
+  padding-left: 0.5em;
 }
 li {
   margin-bottom: 0.25em;
   position: relative;
 }
 li + li {
-  border-top: 1px dotted #d8d8d8;
+  border-top: 1px dotted rgba(0, 0, 0, 0.05);
   margin-top: 0.25em;
   padding-top: 0.25em;
 }
-li::before {
-  color: #9e9e9d;
+ul li::before {
+  color: rgba(0, 0, 0, 0.25);
   content: "\2726";
   margin-right: 1em;
 }
 li li {
   font-size: 0.98em;
 }
-li li::before {
+ul ul li::before {
   content: "\2727";
 }
-li li li::before {
+ul ul ul li::before {
   content: "\25FE";
 }
-li li li li::before {
+ul ul ul ul li::before {
   content: "\25FD";
 }
-td ul {
+td ol, td ul {
   margin: 0.5em 0;
 }
 main {
   padding: 5rem 3rem;
+  position: relative;
+}
+header + main {
+  margin-top: 0;
 }
 mark {
   background-color: #40efec;
@@ -420,6 +573,7 @@ nav:first-child {
   border-bottom: 2px solid rgba(0, 0, 0, 0.15);
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 nav:first-child::after {
   background-color: rgba(0, 0, 0, 0.05);
@@ -431,7 +585,7 @@ nav:first-child::after {
   width: 100%;
 }
 nav:first-child + header, nav:first-child + main {
-  margin-top: 58px;
+  margin-top: 70px;
 }
 nav ul {
   list-style: none;
@@ -452,7 +606,11 @@ header + nav {
   margin-top: 0;
 }
 p {
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
   font-family: Times New Roman, Times, serif;
+  hyphens: auto;
   text-align: justify;
 }
 p + p {
@@ -467,18 +625,19 @@ q {
 }
 q::after, q::before {
   color: #d1cfca;
+  font-family: Lucida Console, Monaco, monospace;
   font-size: 2em;
   font-style: normal;
   line-height: 0;
-  vertical-align: text-bottom;
+  vertical-align: sub;
 }
 q::before {
-  content: "\275D";
+  content: "\00AB";
   margin-left: 0.2em;
   margin-right: 0.15em;
 }
 q::after {
-  content: "\275E";
+  content: "\00BB";
   margin-left: 0.15em;
   margin-right: 0.2em;
 }
@@ -499,6 +658,9 @@ table {
   border-collapse: collapse;
   table-layout: fixed;
   width: auto;
+}
+table table {
+  outline: 3px solid hsla(0, 0%, 100%, 0.5);
 }
 caption {
   border-bottom: 5px solid #e8e7e5;
@@ -535,7 +697,6 @@ tr:hover td::after {
   top: 0;
 }
 th {
-  border-color: #434241;
   color: #fffdf7;
   font-size: 0.8em;
   font-weight: 400;
@@ -550,6 +711,21 @@ th + th::before {
   position: absolute;
   top: 0;
 }
+tfoot td::after {
+  background-color: #edebe6;
+}
+::-moz-selection, ::selection {
+  background: #00eae6;
+  color: #000;
+}
+em {
+  font-style: oblique;
+  font-weight: 700;
+}
+strong {
+  font-weight: 700;
+  text-decoration: underline;
+}
 time {
   font-family: Courier New, Courier, monospace;
   letter-spacing: -0.5px;
@@ -562,7 +738,6 @@ time[datetime]:hover {
   border-bottom: 1px dashed;
 }
 time[datetime]::after {
-  -webkit-transform: translatey(calc(-100% - 5px));
   background-color: #000d07;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
